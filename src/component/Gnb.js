@@ -13,3 +13,5 @@ const Gnb = () =>(
         </li>
     </ul>
 )
+
+export default Gnb;
