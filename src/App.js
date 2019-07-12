@@ -5,7 +5,7 @@ import Movie from './Movie';
 
 
 const movies=[
-  {
+  { 
     title: "스파이더맨: 파 프롬 홈",
     poster: "http://img.cgv.co.kr/Movie/Thumbnail/Poster/000081/81619/81619_1000.jpg"
   },
@@ -29,8 +29,8 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        {movies.map(movie => {
-          return<Movie title={movie.title} poster={movie.poster} />
+        {movies.map((movie,index) => {
+          return <Movie title={movie.title} poster={movie.poster} key={index} />
         })}
       </div>
     );

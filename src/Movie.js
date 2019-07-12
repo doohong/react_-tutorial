@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
 import './Movie.css';
+import PropTypes from 'prop-types';
 
 class Movie extends Component{
+    static propTypes = {
+        title: PropTypes.string.isRequired,
+        poster: PropTypes.string.isRequired
+    }
     render(){
-       
         return(
             <div>
                 <MoviePoster poster={this.props.poster} />
@@ -14,6 +18,9 @@ class Movie extends Component{
 }
 
 class MoviePoster extends Component{
+    propTypes={
+        poster: PropTypes.string
+    }
     render(){
         return(
             <img src={this.props.poster} />
