@@ -37,9 +37,10 @@ class App extends Component {
     .catch(err => console.log(err))
   }
   render(){
+    const {movies} = this.state;
     return (
-      <div className="App">
-        {this.state.movies ? this._renderMovies() : "Lodding"}
+      <div className={movies? "App" : "App--loading"}>
+        {movies ? this._renderMovies() : "Lodding"}
       </div>
     );
   }

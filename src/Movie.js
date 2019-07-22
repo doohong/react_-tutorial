@@ -17,7 +17,7 @@ function Movie({poster, title, genres, synopsis}){
                     {genres.map((genre,index) => <MovieGenre genre={genre} key={index} />)}
                 </div>
                 <p className="Movie_Synopsis">
-                    {synopsis}    
+                {synopsis}    
                 </p>
             </div>
         </div>
